@@ -70,8 +70,8 @@ client/
 - **Mono:** `JetBrains Mono` (Code, data, technical specs)
 
 **Color Palette (Tailwind Variables):**
-- **Background:** `hsl(240 10% 3.9%)` (Dark Zinc/Black)
-- **Foreground:** `hsl(0 0% 98%)` (Off-white)
+- **Background:** `hsl(0 0% 4%)` (Off-black for reduced eye strain)
+- **Foreground:** `hsl(0 0% 90%)` (Off-white for readability)
 - **Accent/Muted:** `hsl(240 3.7% 15.9%)` (Dark Grey)
 - **Destructive:** `hsl(0 62.8% 30.6%)` (Deep Red)
 
@@ -79,6 +79,7 @@ client/
 - `.tech-grid`: Custom CSS background pattern for the Hero section.
 - `.glass-card`: Backdrop blur utility for overlays.
 - `rounded-none`: Global override for buttons to enforce the "sharp/technical" look.
+- `leading-[1.6]`: Global line-height adjustment for improved body text readability.
 
 ---
 
@@ -107,10 +108,11 @@ client/
 ## 7. What's Working
 
 - **Navigation:** Fully responsive. Mobile menu works smoothly.
-- **Routing:** All page links function correctly without full page reloads.
+- **Routing:** All page links function correctly without full page reloads. Scroll-to-top implemented on route change.
 - **Forms:** Validation works (required fields, email format), submission state handles loading/success.
-- **Responsive Design:** Grid layouts stack correctly on mobile (1 col) vs desktop (3 col).
+- **Responsive Design:** Grid layouts stack correctly on mobile (1 col) vs desktop (3 col). Hidden desktop-only elements on mobile.
 - **Visuals:** Dark mode aesthetic is consistent across all pages.
+- **Animations:** Optimized for speed (0.1s duration) for a snappy, premium feel.
 
 ---
 
@@ -128,6 +130,7 @@ client/
 - **Hero Visual:** Used an abstract "Tech Grid" instead of a generic dark background to give it more "engineering" character.
 - **Mockup:** Generated a 3D isometric view of the dashboard for the Case Study to make the "Software" aspect tangible.
 - **Menu Animation:** Added a slide-down animation to the mobile menu for a more polished feel.
+- **Color Palette:** Shifted from pure black (#000) to off-black (#0a0a0a) to improve readability and reduce eye strain.
 
 ---
 
@@ -181,9 +184,9 @@ client/
 > **CTA:** See the Full Case Study
 
 **Philosophy:**
-> **Quote:** "Build Fast. Test Relentlessly. Kill What Doesn't Work."
-> **Body:** We built a text-based AI assistant. It worked technically. But real-world testing showed it needed more personal touch. We killed it in a week and pivoted to voice AI — which performed significantly better on day one. That's the methodology: every automation is tested against real leads.
-> **Tagline:** Automation finds the humans. That's the point.
+> **Headline:** "Automate Until It Breaks."
+> **Body:** We automate aggressively — not to replace humans, but to find where they are irreplaceable. When automation hits a wall, that's the signal. That's where you hire. That's where you pay top dollar.
+> **Tagline:** THE SAVINGS FUND THE TALENT.
 
 **Comparison:**
 > **Headers:** Cost | Timeline | Deliverables | AI Included | Ongoing Cost
