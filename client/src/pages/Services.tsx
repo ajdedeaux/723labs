@@ -110,7 +110,7 @@ export default function Services() {
               className={`relative p-10 rounded-2xl border transition-all duration-500 flex flex-col group ${
                 pkg.popular 
                   ? "border-white/20 bg-white/[0.03] shadow-[0_0_50px_-20px_rgba(255,255,255,0.1)]" 
-                  : "border-white/[0.08] bg-black hover:border-white/20 hover:bg-white/[0.02]"
+                  : "border-white/10 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.04]"
               }`}
             >
               {pkg.popular && (
@@ -120,25 +120,25 @@ export default function Services() {
               )}
               
               <h3 className="text-2xl font-bold font-heading mb-2">{pkg.name}</h3>
-              <div className="text-xl text-white/50 font-mono mb-6">{pkg.price}</div>
-              <p className="text-white/70 text-sm mb-8 h-10 font-light leading-relaxed">{pkg.desc}</p>
+              <div className="text-xl text-zinc-400 font-mono mb-6">{pkg.price}</div>
+              <p className="text-zinc-300 text-sm mb-8 h-10 font-light leading-relaxed">{pkg.desc}</p>
               
               <ul className="space-y-4 mb-10 flex-1">
                 {pkg.features.map((feat, j) => (
-                  <li key={j} className="flex gap-3 text-sm text-white/80 font-light group-hover:text-white transition-colors">
-                    <Check className="w-4 h-4 text-white/40 shrink-0 mt-0.5 group-hover:text-white transition-colors" />
+                  <li key={j} className="flex gap-3 text-sm text-zinc-300 font-light group-hover:text-white transition-colors">
+                    <Check className="w-4 h-4 text-white/60 shrink-0 mt-0.5 group-hover:text-white transition-colors" />
                     {feat}
                   </li>
                 ))}
               </ul>
               
-              <div className="mt-auto pt-8 border-t border-white/[0.08] group-hover:border-white/20 transition-colors">
-                <div className="text-xs text-white/30 font-mono mb-6 uppercase tracking-widest">Timeline: {pkg.timeline}</div>
+              <div className="mt-auto pt-8 border-t border-white/10 group-hover:border-white/20 transition-colors">
+                <div className="text-xs text-zinc-500 font-mono mb-6 uppercase tracking-widest">Timeline: {pkg.timeline}</div>
                 <Link href="/contact">
                   <Button className={`w-full rounded-full h-12 text-sm font-bold tracking-wide transition-all duration-300 ${
                     pkg.popular 
                       ? "bg-white text-black hover:bg-white/90 hover:scale-[1.02]" 
-                      : "bg-white/10 text-white hover:bg-white hover:text-black"
+                      : "bg-white/10 text-white border border-white/10 hover:bg-white hover:text-black hover:border-white"
                   }`}>
                     Select Package
                   </Button>
