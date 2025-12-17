@@ -78,7 +78,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black overflow-hidden">
       <div className="grain" />
       <Navbar />
 
