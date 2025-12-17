@@ -51,12 +51,12 @@ export function Navbar() {
                 <a 
                   className={cn(
                     "text-sm font-medium transition-all duration-300 relative group py-2",
-                    isActive(link.href) ? "text-white" : "text-white/60 hover:text-[#E0C58F]"
+                    isActive(link.href) ? "text-white" : "text-white/60 hover:text-[#10B981]"
                   )}
                 >
                   {link.label}
                   <span className={cn(
-                    "absolute bottom-0 left-0 h-[1px] bg-[#E0C58F] transition-all duration-300",
+                    "absolute bottom-0 left-0 h-[1px] bg-[#10B981] transition-all duration-300",
                     isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
                   )} />
                 </a>
@@ -65,7 +65,7 @@ export function Navbar() {
             <Link href="/contact">
               <Button 
                 variant="outline" 
-                className="rounded-full border-white/20 bg-transparent text-white hover:bg-[#E0C58F] hover:text-black hover:border-[#E0C58F] transition-all duration-500 px-6 tracking-wide text-xs uppercase font-bold"
+                className="rounded-full border-white/20 bg-transparent text-white hover:bg-[#10B981] hover:text-white hover:border-[#10B981] transition-all duration-500 px-6 tracking-wide text-xs uppercase font-bold"
               >
                 Let's Talk
               </Button>
@@ -105,7 +105,7 @@ export function Navbar() {
                       onClick={() => setIsOpen(false)}
                       className={cn(
                         "text-3xl font-heading font-bold tracking-tight transition-colors",
-                        isActive(link.href) ? "text-white" : "text-white/40 hover:text-[#E0C58F]"
+                        isActive(link.href) ? "text-white" : "text-white/40 hover:text-[#10B981]"
                       )}
                     >
                       {link.label}
@@ -121,7 +121,7 @@ export function Navbar() {
                 <Link href="/contact">
                   <Button 
                     onClick={() => setIsOpen(false)} 
-                    className="rounded-full px-8 py-6 text-lg bg-white text-black hover:bg-[#E0C58F] hover:text-black mt-8"
+                    className="rounded-full px-8 py-6 text-lg bg-white text-black hover:bg-[#10B981] hover:text-white mt-8"
                   >
                     Start Project
                   </Button>

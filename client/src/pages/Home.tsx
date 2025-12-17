@@ -45,7 +45,7 @@ export default function Home() {
             >
               <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-extrabold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
-                <span className="text-[#E0C58F]">
+                <span className="text-[#10B981]">
                   MACHINE
                 </span>
                 <br />
@@ -170,9 +170,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0, duration: 0.1 }}
-                className="group relative border-l border-white/10 pl-8 py-8 hover:border-[#E0C58F]/50 transition-colors duration-500"
+                className="group relative border-l border-white/10 pl-8 py-8 hover:border-emerald-500/50 transition-colors duration-500"
               >
-                <div className="mb-8 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-[#E0C58F] group-hover:text-black transition-all duration-500">
+                <div className="mb-8 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:text-black transition-all duration-500">
                   {col.icon}
                 </div>
                 <h3 className="text-3xl font-bold mb-4 font-heading text-white">{col.title}</h3>
@@ -189,7 +189,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-medium mb-8 text-white/80 backdrop-blur-sm border border-white/10">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E0C58F] animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 CASE STUDY: CHEF G EVENTS
               </div>
               <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 leading-[0.9] tracking-tight text-white">
@@ -220,7 +220,7 @@ export default function Home() {
               </ul>
 
               <Link href="/case-study">
-                <Button variant="outline" size="lg" className="rounded-full border-white/20 hover:bg-[#E0C58F] hover:text-black hover:border-[#E0C58F] transition-all duration-300 h-14 px-8 text-base">
+                <Button variant="outline" size="lg" className="rounded-full border-white/20 hover:bg-[#10B981] hover:text-white hover:border-[#10B981] transition-all duration-300 h-14 px-8 text-base">
                   See the Full Case Study <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
@@ -263,7 +263,7 @@ export default function Home() {
             <div className="bg-zinc-950/50 p-8 font-bold text-white/40 text-center uppercase tracking-widest text-xs backdrop-blur-md">Traditional</div>
             <div className="bg-white/5 p-8 font-bold text-white text-center uppercase tracking-widest text-xs relative backdrop-blur-md">
               723 Labs
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-[#E0C58F] shadow-[0_0_15px_rgba(224,197,143,0.5)]" />
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
             </div>
 
             {/* Rows */}
