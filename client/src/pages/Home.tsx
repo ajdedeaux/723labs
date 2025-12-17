@@ -3,8 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, X, Database, Bot, TrendingUp, Play } from "lucide-react";
-import heroTexture from "@assets/generated_images/cinematic_dark_light_leak_texture.png";
+import { ArrowRight, Check, X, Database, Bot, TrendingUp } from "lucide-react";
+import heroTexture from "@assets/generated_images/dark_cinematic_fog_texture.png";
 import mockup from "@assets/generated_images/catering_app_dashboard_mockup.png";
 
 export default function Home() {
@@ -21,12 +21,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Cinematic Background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           <div 
-            className="absolute inset-0 opacity-40 bg-cover bg-center mix-blend-screen"
+            className="absolute inset-0 opacity-80 bg-cover bg-center mix-blend-screen scale-105"
             style={{ backgroundImage: `url(${heroTexture})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black" />
+          {/* Vignette & Gradients */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
+          
           <motion.div 
             style={{ y: y1 }}
             className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-white/[0.03] rounded-full blur-[120px]" 
@@ -34,15 +37,15 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10 mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-9">
+          <div className="lg:col-span-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-heading font-bold tracking-tighter leading-[0.85] mb-10">
+              <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-bold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40">
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-500">
                   MACHINE
                 </span>
                 <br />
@@ -59,7 +62,7 @@ export default function Home() {
               className="flex flex-col md:flex-row gap-8 items-start md:items-center max-w-3xl mb-12"
             >
               <div className="w-12 h-[1px] bg-white/30 hidden md:block" />
-              <p className="text-xl md:text-2xl text-white/60 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed font-light">
                 Complete business operating systems for service companies. <br className="hidden md:block" />
                 Not websites — revenue machines that run while you sleep.
               </p>
@@ -71,7 +74,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight btn-glow">
+                <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight btn-glow shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
                   Book a Discovery Call
                 </Button>
               </Link>
@@ -81,8 +84,9 @@ export default function Home() {
 
         <motion.div 
           style={{ opacity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20 text-sm tracking-widest uppercase animate-pulse"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20 text-sm tracking-widest uppercase animate-pulse flex flex-col items-center gap-2"
         >
+          <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
           Scroll to Explore
         </motion.div>
       </section>
@@ -91,10 +95,10 @@ export default function Home() {
       <section className="py-32 border-t border-white/[0.08] relative">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-center text-white">
               You're Probably Doing This Right Now
             </h2>
-            <p className="text-white/50 text-xl text-center font-light">
+            <p className="text-zinc-500 text-xl text-center font-light">
               Great service. No system. That's the gap.
             </p>
           </div>
@@ -118,7 +122,7 @@ export default function Home() {
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors">
                   <X className="w-4 h-4 text-white/40 group-hover:text-red-500 transition-colors" />
                 </div>
-                <p className="text-white/70 font-light leading-relaxed group-hover:text-white transition-colors">{item}</p>
+                <p className="text-zinc-400 font-light leading-relaxed group-hover:text-zinc-200 transition-colors">{item}</p>
               </motion.div>
             ))}
           </div>
@@ -132,12 +136,12 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="mb-24 md:flex justify-between items-end">
             <div>
-              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 tracking-tight text-white">
                 What If Your Business <br />
                 Ran Without You?
               </h2>
             </div>
-            <p className="text-xl text-white/50 max-w-sm font-light mt-8 md:mt-0 text-right">
+            <p className="text-xl text-zinc-500 max-w-sm font-light mt-8 md:mt-0 text-right">
               One engagement. Complete system. <br />You own everything.
             </p>
           </div>
@@ -171,8 +175,8 @@ export default function Home() {
                 <div className="mb-8 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-500">
                   {col.icon}
                 </div>
-                <h3 className="text-3xl font-bold mb-4 font-heading">{col.title}</h3>
-                <p className="text-white/50 leading-relaxed font-light group-hover:text-white/80 transition-colors">{col.desc}</p>
+                <h3 className="text-3xl font-bold mb-4 font-heading text-white">{col.title}</h3>
+                <p className="text-zinc-500 leading-relaxed font-light group-hover:text-zinc-300 transition-colors">{col.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -188,7 +192,7 @@ export default function Home() {
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                 CASE STUDY: CHEF G EVENTS
               </div>
-              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 leading-[0.9] tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 leading-[0.9] tracking-tight text-white">
                 Built in 6 Weeks. <br />
                 <span className="text-white/40">Paying for Itself in 60 Days.</span>
               </h2>
@@ -207,7 +211,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1, duration: 0.5 }}
-                    className="flex items-center gap-6 text-lg text-white/70 border-b border-white/10 pb-4 last:border-0 font-light"
+                    className="flex items-center gap-6 text-lg text-zinc-400 border-b border-white/10 pb-4 last:border-0 font-light"
                   >
                     <span className="text-xs font-bold text-white/30 font-mono">0{i + 1}</span>
                     {stat}
@@ -241,10 +245,10 @@ export default function Home() {
       <section className="py-32 bg-black relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-black to-black" />
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
             "Build Fast. Test Relentlessly. <br /> <span className="text-white/30">Kill What Doesn't Work.</span>"
           </h2>
-          <p className="text-xl md:text-2xl text-white/60 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
             We built a text-based AI assistant. It worked technically. But real-world testing showed it needed more personal touch. We killed it in a week and pivoted to voice AI — which performed significantly better on day one.
           </p>
           <div className="inline-block border border-white/20 rounded-full px-6 py-2">
@@ -258,7 +262,7 @@ export default function Home() {
       {/* Comparison */}
       <section className="py-32 border-t border-white/[0.08]">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-heading font-bold mb-16 text-center tracking-tight">Traditional Agency vs. 723 Labs</h2>
+          <h2 className="text-3xl font-heading font-bold mb-16 text-center tracking-tight text-white">Traditional Agency vs. 723 Labs</h2>
           
           <div className="grid md:grid-cols-3 gap-[1px] bg-white/10 border border-white/10 max-w-6xl mx-auto rounded-2xl overflow-hidden">
             {/* Headers */}
@@ -297,7 +301,7 @@ export default function Home() {
       <section className="py-40 relative overflow-hidden">
         <div className="absolute inset-0 bg-white/[0.02]" />
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-6xl md:text-8xl font-heading font-bold mb-8 tracking-tighter">
+          <h2 className="text-6xl md:text-8xl font-heading font-bold mb-8 tracking-tighter text-white">
             Let's See If This Fits.
           </h2>
           <p className="text-xl md:text-2xl text-white/50 mb-12 max-w-2xl mx-auto font-light">
