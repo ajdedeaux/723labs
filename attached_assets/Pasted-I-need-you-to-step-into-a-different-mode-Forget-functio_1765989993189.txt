@@ -1,0 +1,43 @@
+I need you to step into a different mode. Forget "functional." Forget "MVP."
+You are now a $50K brand designer and UX specialist. The kind of person who builds sites for venture-backed startups, luxury brands, and people who don't ask "how much" — they ask "how good."
+The Brief:
+The current 723 Labs site is functional. It works. But it's flat. It doesn't make someone feel something when they land on it. I need this site to hit different.
+Who I Am:
+I came from the slums. Nine years in federal prison. No network, no resume, no safety net. I built my way out through pure execution. I'm a diamond in the rough — raw, real, but polished where it counts. I dress sharp. I speak with precision. I deliver. The site needs to reflect that energy.
+The Aesthetic I Want:
+
+Premium but grounded — Not flashy-rich. Quiet confidence. The difference between a guy in a loud Gucci logo shirt vs. a guy in a perfectly tailored black tee.
+Dark, sophisticated, intentional — Every pixel should feel considered. Nothing accidental.
+Movement that feels alive — Subtle animations, smooth transitions, micro-interactions that make the page feel responsive and premium. Not gimmicky — purposeful.
+Typography that commands — Headlines should hit. Body text should breathe. Hierarchy should be crystal clear.
+Whitespace as a power move — Let the content breathe. Premium brands don't crowd.
+Details that reward attention — Hover states, scroll reveals, subtle gradients, refined shadows. The stuff that makes designers nod.
+
+Reference Energy (not to copy, but to feel):
+
+Linear.app — Clean, dark, every interaction feels premium
+Stripe.com — Sophisticated gradients, beautiful typography, animations that feel effortless
+Vercel.com — Developer-focused but stunning, dark mode done right
+Apple.com — The confidence to let product speak, whitespace as design
+Rolls Royce / Porsche sites — Luxury without trying too hard
+
+What to Elevate:
+
+Hero section — Make it cinematic. The headline should feel like it's carved in stone. Add depth — maybe a subtle gradient, a refined glow, or a motion element that draws the eye.
+Typography upgrade — If Space Grotesk isn't hitting premium enough, explore: Söhne, Satoshi, General Sans, or keep it but refine the weights and spacing.
+Card components — Add subtle glass morphism, refined borders, hover states that feel tactile. When someone hovers on a service package, it should feel like picking up a luxury brochure.
+Scroll experience — Elements should reveal with intention. Fade-ups, subtle parallax, staggered animations. Not overwhelming — choreographed.
+The Numbers/Comparison section — Make this feel like a data visualization from a premium deck. Not just a table — something that visually communicates the value gap.
+CTA buttons — These should feel like they want to be clicked. Subtle glow, smooth hover transitions, maybe a slight scale or shadow shift.
+Footer — Even the footer should feel finished. Not an afterthought.
+
+What to Keep:
+
+The copy is solid. Don't change the words.
+The dark aesthetic is right. Go darker if anything.
+The story is the differentiator. Make sure it still lands.
+Mobile must be flawless. Premium doesn't break on iPhone.
+
+The Test:
+When someone lands on this site, I want them to think: "Damn. This person is serious." Not "nice website" — I want respect. I want them to feel like they're about to talk to someone who operates at a different level.
+Rebuild the front-end with this energy. Show me what $50K execution looks like.

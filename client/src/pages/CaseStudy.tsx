@@ -4,39 +4,58 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Check, ArrowRight } from "lucide-react";
 import mockup from "@assets/generated_images/catering_app_dashboard_mockup.png";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function CaseStudy() {
+  const { scrollY } = useScroll();
+  const scale = useTransform(scrollY, [0, 500], [1, 1.05]);
+  const opacity = useTransform(scrollY, [0, 500], [0.5, 0.8]);
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+      <div className="grain" />
       <Navbar />
 
-      <section className="pt-32 pb-20 container mx-auto px-6">
-        <div className="max-w-4xl">
-          <div className="inline-block px-3 py-1 bg-zinc-800 text-xs font-mono mb-6 text-zinc-400 border border-zinc-700">
-            CASE STUDY: CHEF G EVENTS
-          </div>
-          <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tighter mb-8">
-            How a Catering Business Became a Revenue Machine
-          </h1>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
-            Chef G Events: From referral-dependent to systematically scalable in 6 weeks.
-          </p>
+      <section className="pt-40 pb-20 container mx-auto px-6">
+        <div className="max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-medium mb-8 text-white/80 backdrop-blur-sm border border-white/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              CASE STUDY: CHEF G EVENTS
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter mb-10 leading-[0.9]">
+              How a Catering Business Became a <span className="text-white/40">Revenue Machine</span>
+            </h1>
+            <p className="text-2xl text-white/60 leading-relaxed font-light max-w-3xl">
+              Chef G Events: From referral-dependent to systematically scalable in 6 weeks.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="pb-20 container mx-auto px-6">
-        <img 
-          src={mockup} 
-          alt="Chef G Transformation" 
-          className="w-full rounded border border-zinc-800 shadow-2xl"
-        />
+      <section className="pb-32 container mx-auto px-6">
+        <motion.div 
+          style={{ scale }}
+          className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-50" />
+          <img 
+            src={mockup} 
+            alt="Chef G Transformation" 
+            className="w-full grayscale hover:grayscale-0 transition-all duration-1000"
+          />
+        </motion.div>
       </section>
 
-      <section className="py-20 border-t border-zinc-900">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16">
+      <section className="py-20 border-t border-white/[0.08]">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20">
           <div>
-            <h2 className="text-3xl font-heading font-bold mb-8">Before: Great Food, No System</h2>
-            <ul className="space-y-4">
+            <h2 className="text-3xl font-heading font-bold mb-8 text-white/40">Before: Great Food, No System</h2>
+            <ul className="space-y-6">
               {[
                 "No systematic lead capture (Instagram DMs, random emails)",
                 "Manual follow-up — every lead required personal response",
@@ -45,20 +64,22 @@ export default function CaseStudy() {
                 "Inconsistent pricing — every quote started from scratch",
                 "No marketing strategy — occasional Instagram posts only"
               ].map((item, i) => (
-                <li key={i} className="flex gap-4 items-start text-muted-foreground">
-                  <span className="text-zinc-700 mt-1">✕</span>
+                <li key={i} className="flex gap-4 items-start text-white/60 font-light text-lg">
+                  <span className="text-red-500/50 mt-1 font-mono">0{i+1}</span>
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="mt-8 text-sm font-mono text-zinc-500 border-l-2 border-zinc-800 pl-4">
-              "The business was successful on referrals alone — proof of an excellent product. But growth was capped by operational capacity."
-            </p>
+            <div className="mt-12 p-8 border-l border-white/20 bg-white/[0.02]">
+              <p className="text-white/80 italic font-light leading-relaxed">
+                "The business was successful on referrals alone — proof of an excellent product. But growth was capped by operational capacity."
+              </p>
+            </div>
           </div>
 
           <div>
             <h2 className="text-3xl font-heading font-bold mb-8 text-white">After: Complete Operating System</h2>
-            <div className="space-y-8">
+            <div className="space-y-12">
               {[
                 {
                   title: "Digital Presence",
@@ -77,48 +98,63 @@ export default function CaseStudy() {
                   items: ["Automated booking flow", "Real-time calendar sync", "$200 deposit collection via Stripe"]
                 }
               ].map((group, i) => (
-                <div key={i}>
-                  <h3 className="font-bold text-lg mb-3 text-zinc-200">{group.title}</h3>
-                  <ul className="space-y-2">
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <h3 className="font-bold text-xl mb-4 text-white">{group.title}</h3>
+                  <ul className="space-y-3">
                     {group.items.map((item, j) => (
-                      <li key={j} className="flex gap-3 items-start text-zinc-400 text-sm">
-                        <Check className="w-4 h-4 text-white mt-0.5" />
+                      <li key={j} className="flex gap-3 items-start text-white/60 font-light">
+                        <Check className="w-5 h-5 text-white mt-0.5" />
                         {item}
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-zinc-900/30 border-y border-zinc-900">
+      <section className="py-32 bg-white/[0.02] border-y border-white/[0.08]">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-heading font-bold mb-12 text-center">The Numbers That Matter</h2>
+          <h2 className="text-3xl font-heading font-bold mb-16 text-center">The Numbers That Matter</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { label: "Lead Response", val: "Instant (24/7)" },
-              { label: "Capture Rate", val: "100% Tracked" },
-              { label: "Quote Time", val: "5 Minutes" },
-              { label: "Projected ROAS", val: "20x+" }
+              { label: "Lead Response", val: "Instant", sub: "24/7 Coverage" },
+              { label: "Capture Rate", val: "100%", sub: "Fully Tracked" },
+              { label: "Quote Time", val: "5 Min", sub: "Automated" },
+              { label: "Projected ROAS", val: "20x+", sub: "High Return" }
             ].map((stat, i) => (
-              <div key={i} className="bg-zinc-950 border border-zinc-800 p-8 text-center">
-                <div className="text-3xl font-bold text-white mb-2">{stat.val}</div>
-                <div className="text-sm font-mono text-zinc-500 uppercase tracking-wider">{stat.label}</div>
-              </div>
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-black border border-white/10 p-10 text-center rounded-2xl hover:border-white/30 transition-colors group"
+              >
+                <div className="text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">{stat.val}</div>
+                <div className="text-sm font-mono text-white/40 uppercase tracking-widest mb-1">{stat.label}</div>
+                <div className="text-xs text-white/20">{stat.sub}</div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-32 text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-heading font-bold mb-8">Want the Same System?</h2>
+      <section className="py-40 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/[0.02]" />
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 tracking-tighter">Want the Same System?</h2>
           <Link href="/contact">
-            <Button size="lg" className="rounded-none px-10 py-6 text-lg">
-              Book a Discovery Call <ArrowRight className="ml-2" />
+            <Button size="lg" className="rounded-full px-12 py-10 text-xl bg-white text-black hover:bg-white/90 hover:scale-105 transition-all font-bold">
+              Book a Discovery Call
             </Button>
           </Link>
         </div>

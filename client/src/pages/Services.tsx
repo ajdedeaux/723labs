@@ -2,7 +2,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const packages = [
@@ -77,67 +78,86 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+      <div className="grain" />
       <Navbar />
 
-      <section className="pt-32 pb-20 container mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-7xl font-heading font-bold tracking-tighter mb-6">
-          From Website to <br /> Operating System
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Five packages. One methodology. You choose how deep to go.
-        </p>
+      <section className="pt-40 pb-24 container mx-auto px-6 text-center relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[120px] pointer-events-none" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-8xl font-heading font-bold tracking-tighter mb-8 leading-[0.9]">
+            From Website to <br /> <span className="text-white/40">Operating System</span>
+          </h1>
+          <p className="text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed">
+            Five packages. One methodology. You choose how deep to go.
+          </p>
+        </motion.div>
       </section>
 
       <section className="pb-32 container mx-auto px-6">
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {packages.map((pkg, i) => (
-            <div 
-              key={i} 
-              className={`relative p-8 border ${
-                pkg.popular ? "border-white bg-zinc-900" : "border-zinc-800 bg-zinc-950"
-              } flex flex-col`}
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className={`relative p-10 rounded-2xl border transition-all duration-500 flex flex-col group ${
+                pkg.popular 
+                  ? "border-white/20 bg-white/[0.03] shadow-[0_0_50px_-20px_rgba(255,255,255,0.1)]" 
+                  : "border-white/[0.08] bg-black hover:border-white/20 hover:bg-white/[0.02]"
+              }`}
             >
               {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-white text-black text-xs font-bold px-3 py-1 font-mono">
-                  MOST POPULAR
+                <div className="absolute top-0 right-0 bg-white text-black text-[10px] font-bold px-4 py-1.5 font-mono uppercase tracking-widest rounded-bl-xl rounded-tr-xl">
+                  Most Popular
                 </div>
               )}
               
               <h3 className="text-2xl font-bold font-heading mb-2">{pkg.name}</h3>
-              <div className="text-xl text-zinc-400 font-mono mb-4">{pkg.price}</div>
-              <p className="text-muted-foreground text-sm mb-8 h-10">{pkg.desc}</p>
+              <div className="text-xl text-white/50 font-mono mb-6">{pkg.price}</div>
+              <p className="text-white/70 text-sm mb-8 h-10 font-light leading-relaxed">{pkg.desc}</p>
               
-              <ul className="space-y-4 mb-8 flex-1">
+              <ul className="space-y-4 mb-10 flex-1">
                 {pkg.features.map((feat, j) => (
-                  <li key={j} className="flex gap-3 text-sm text-zinc-300">
-                    <Check className="w-4 h-4 text-zinc-500 shrink-0 mt-0.5" />
+                  <li key={j} className="flex gap-3 text-sm text-white/80 font-light group-hover:text-white transition-colors">
+                    <Check className="w-4 h-4 text-white/40 shrink-0 mt-0.5 group-hover:text-white transition-colors" />
                     {feat}
                   </li>
                 ))}
               </ul>
               
-              <div className="mt-auto pt-6 border-t border-zinc-800">
-                <div className="text-xs text-zinc-500 font-mono mb-4">TIMELINE: {pkg.timeline}</div>
+              <div className="mt-auto pt-8 border-t border-white/[0.08] group-hover:border-white/20 transition-colors">
+                <div className="text-xs text-white/30 font-mono mb-6 uppercase tracking-widest">Timeline: {pkg.timeline}</div>
                 <Link href="/contact">
-                  <Button className={`w-full rounded-none ${pkg.popular ? "bg-white text-black hover:bg-zinc-200" : "bg-zinc-800 hover:bg-zinc-700"}`}>
+                  <Button className={`w-full rounded-full h-12 text-sm font-bold tracking-wide transition-all duration-300 ${
+                    pkg.popular 
+                      ? "bg-white text-black hover:bg-white/90 hover:scale-[1.02]" 
+                      : "bg-white/10 text-white hover:bg-white hover:text-black"
+                  }`}>
                     Select Package
                   </Button>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
-      <section className="py-24 bg-zinc-900/30 border-y border-zinc-900">
-        <div className="container mx-auto px-6 text-center max-w-3xl">
-          <h2 className="text-3xl font-heading font-bold mb-6">Not Sure Which Package?</h2>
-          <p className="text-muted-foreground mb-10">
+      <section className="py-32 border-y border-white/[0.08] relative overflow-hidden">
+        <div className="absolute inset-0 bg-white/[0.02]" />
+        <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Not Sure Which Package?</h2>
+          <p className="text-white/60 mb-12 text-lg font-light leading-relaxed">
             Let's talk through your situation. I'll tell you what makes sense — even if it's not the biggest package.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="rounded-none px-8">
+            <Button size="lg" className="rounded-full px-10 py-8 text-lg bg-white text-black hover:bg-white/90 transition-all font-bold">
               Book a Discovery Call
             </Button>
           </Link>
