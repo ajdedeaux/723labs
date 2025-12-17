@@ -291,17 +291,17 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-40 relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/[0.02]" />
+      <section className="py-40 relative overflow-hidden bg-white text-black">
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-6xl md:text-8xl font-heading font-bold mb-8 tracking-tighter text-white">
+          <h2 className="text-6xl md:text-8xl font-heading font-bold mb-8 tracking-tighter text-black">
             Let's See If This Fits.
           </h2>
-          <p className="text-xl md:text-2xl text-white/50 mb-12 max-w-2xl mx-auto font-light">
+          <p className="text-xl md:text-2xl text-zinc-600 mb-12 max-w-2xl mx-auto font-light">
             45 minutes. No charge. You'll leave with clarity on what you need — even if you don't hire me.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full text-xl px-12 py-10 bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 btn-glow font-bold">
+            <Button size="lg" className="rounded-full text-xl px-12 py-10 bg-black text-white hover:bg-black/90 hover:scale-105 transition-all duration-300 shadow-2xl font-bold">
               Schedule Discovery Call
             </Button>
           </Link>
