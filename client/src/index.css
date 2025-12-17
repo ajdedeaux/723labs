@@ -37,6 +37,7 @@
   --radius-lg: var(--radius);
 
   --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }

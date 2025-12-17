@@ -6,6 +6,8 @@ import { Check, ArrowRight } from "lucide-react";
 import { ChefGMockup } from "@/components/ChefGMockup";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import { QuoteBuilderMockup } from "@/components/QuoteBuilderMockup";
+
 export default function CaseStudy() {
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 500], [1, 1.05]);
@@ -125,6 +127,28 @@ export default function CaseStudy() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Internal Tools Showcase */}
+      <section className="py-32 bg-zinc-950 border-t border-white/[0.08] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-black to-black pointer-events-none" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+           <div className="max-w-3xl mx-auto text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
+                Not Just A Website. <br/>
+                <span className="text-[#C69C6D]">A Business Engine.</span>
+              </h2>
+              <p className="text-white/60 text-lg font-light">
+                We built custom internal tools to handle the complexity. <br/>
+                Instant quotes. Automated contracts. Zero friction.
+              </p>
+           </div>
+
+           <div className="max-w-5xl mx-auto">
+             <QuoteBuilderMockup />
+           </div>
         </div>
       </section>
 
