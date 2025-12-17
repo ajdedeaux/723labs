@@ -79,10 +79,14 @@ export default function About() {
             If I can build this under those constraints, imagine what I can do with your business.
           </p>
         </div>
+      </section>
 
-        <div className="mt-24 pt-12 border-t border-white/[0.08]">
+      <section className="py-40 text-center relative overflow-hidden bg-white text-black">
+        <div className="absolute inset-0 bg-white" />
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 tracking-tighter text-black">Ready to Build?</h2>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all font-bold">
+            <Button size="lg" className="rounded-full px-12 py-10 text-xl bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
               Let's Build Your Machine
             </Button>
           </Link>

@@ -149,15 +149,15 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-32 border-y border-white/[0.08] relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/[0.02]" />
+      <section className="py-32 relative overflow-hidden bg-white text-black border-t border-white/10">
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Not Sure Which Package?</h2>
-          <p className="text-white/60 mb-12 text-lg font-light leading-relaxed">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-black">Not Sure Which Package?</h2>
+          <p className="text-zinc-600 mb-12 text-lg font-light leading-relaxed">
             Let's talk through your situation. I'll tell you what makes sense — even if it's not the biggest package.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full px-10 py-8 text-lg bg-white text-black hover:bg-white/90 transition-all font-bold">
+            <Button size="lg" className="rounded-full px-10 py-8 text-lg bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
               Book a Discovery Call
             </Button>
           </Link>

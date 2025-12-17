@@ -148,12 +148,12 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <section className="py-40 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/[0.02]" />
+      <section className="py-40 text-center relative overflow-hidden bg-white text-black">
+        <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 tracking-tighter">Want the Same System?</h2>
+          <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 tracking-tighter text-black">Want the Same System?</h2>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full px-12 py-10 text-xl bg-white text-black hover:bg-white/90 hover:scale-105 transition-all font-bold">
+            <Button size="lg" className="rounded-full px-12 py-10 text-xl bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
               Book a Discovery Call
             </Button>
           </Link>
