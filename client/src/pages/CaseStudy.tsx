@@ -16,7 +16,7 @@ export default function CaseStudy() {
       <div className="grain" />
       <Navbar />
 
-      <section className="pt-40 pb-20 container mx-auto px-6">
+      <section className="pt-24 md:pt-40 pb-16 md:pb-20 container mx-auto px-6">
         <div className="max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,17 +27,17 @@ export default function CaseStudy() {
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               CASE STUDY: CHEF G EVENTS
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter mb-10 leading-[0.9]">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter mb-8 md:mb-10 leading-[0.9]">
               How a Catering Business Became a <span className="text-white/40">Revenue Machine</span>
             </h1>
-            <p className="text-2xl text-white/60 leading-relaxed font-light max-w-3xl">
+            <p className="text-xl md:text-2xl text-white/60 leading-relaxed font-light max-w-3xl">
               Chef G Events: From referral-dependent to systematically scalable in 6 weeks.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <section className="pb-32 container mx-auto px-6">
+      <section className="pb-16 md:pb-32 container mx-auto px-6">
         <motion.div 
           style={{ scale }}
           className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
@@ -51,8 +51,8 @@ export default function CaseStudy() {
         </motion.div>
       </section>
 
-      <section className="py-20 border-t border-white/[0.08]">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20">
+      <section className="py-16 md:py-20 border-t border-white/[0.08]">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-20">
           <div>
             <h2 className="text-3xl font-heading font-bold mb-8 text-white/40">Before: Great Food, No System</h2>
             <ul className="space-y-6">
@@ -64,7 +64,7 @@ export default function CaseStudy() {
                 "Inconsistent pricing — every quote started from scratch",
                 "No marketing strategy — occasional Instagram posts only"
               ].map((item, i) => (
-                <li key={i} className="flex gap-4 items-start text-white/60 font-light text-lg">
+                <li key={i} className="flex gap-4 items-start text-white/60 font-light text-base md:text-lg">
                   <span className="text-red-500/50 mt-1 font-mono">0{i+1}</span>
                   {item}
                 </li>
@@ -121,7 +121,7 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <section className="py-32 bg-white/[0.02] border-y border-white/[0.08]">
+      <section className="py-16 md:py-32 bg-white/[0.02] border-y border-white/[0.08]">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-heading font-bold mb-16 text-center">The Numbers That Matter</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -148,12 +148,12 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <section className="py-40 text-center relative overflow-hidden bg-white text-black">
+      <section className="py-16 md:py-40 text-center relative overflow-hidden bg-white text-black">
         <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 tracking-tighter text-black">Want the Same System?</h2>
+          <h2 className="text-4xl md:text-7xl font-heading font-bold mb-10 tracking-tighter text-black">Want the Same System?</h2>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full px-12 py-10 text-xl bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
+            <Button size="lg" className="w-full md:w-auto rounded-full px-12 py-10 text-xl bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
               Book a Discovery Call
             </Button>
           </Link>

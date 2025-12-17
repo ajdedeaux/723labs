@@ -82,23 +82,23 @@ export default function Services() {
       <div className="grain" />
       <Navbar />
 
-      <section className="pt-40 pb-24 container mx-auto px-6 text-center relative">
+      <section className="pt-24 md:pt-40 pb-16 md:pb-24 container mx-auto px-6 text-center relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[120px] pointer-events-none" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-8xl font-heading font-bold tracking-tighter mb-8 leading-[0.9]">
+          <h1 className="text-4xl md:text-5xl lg:text-8xl font-heading font-bold tracking-tighter mb-8 leading-[0.9]">
             From Website to <br /> <span className="text-white/40">Operating System</span>
           </h1>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed">
             Five packages. One methodology. You choose how deep to go.
           </p>
         </motion.div>
       </section>
 
-      <section className="pb-32 container mx-auto px-6">
+      <section className="pb-16 md:pb-32 container mx-auto px-6">
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {packages.map((pkg, i) => (
             <motion.div 
@@ -107,7 +107,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className={`relative p-10 rounded-2xl border transition-all duration-500 flex flex-col group ${
+              className={`relative p-8 md:p-10 rounded-2xl border transition-all duration-500 flex flex-col group ${
                 pkg.popular 
                   ? "border-white/20 bg-white/[0.03] shadow-[0_0_50px_-20px_rgba(255,255,255,0.1)]" 
                   : "border-white/10 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.04]"
@@ -149,7 +149,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-32 relative overflow-hidden bg-white text-black border-t border-white/10">
+      <section className="py-16 md:py-32 relative overflow-hidden bg-white text-black border-t border-white/10">
         <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8 text-black">Not Sure Which Package?</h2>
@@ -157,7 +157,7 @@ export default function Services() {
             Let's talk through your situation. I'll tell you what makes sense — even if it's not the biggest package.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full px-10 py-8 text-lg bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
+            <Button size="lg" className="w-full md:w-auto rounded-full px-10 py-8 text-lg bg-black text-white hover:bg-black/90 hover:scale-105 transition-all shadow-2xl font-bold">
               Book a Discovery Call
             </Button>
           </Link>

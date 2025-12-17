@@ -43,7 +43,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.1 }}
             >
-              <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-extrabold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
+              <h1 className="text-5xl md:text-8xl lg:text-[7.5rem] font-heading font-extrabold tracking-tighter leading-[0.9] md:leading-[0.85] mb-8 md:mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
                 <span className="text-[#10B981]">
                   MACHINE
@@ -62,7 +62,7 @@ export default function Home() {
               className="flex flex-col md:flex-row gap-8 items-start md:items-center max-w-3xl mb-12"
             >
               <div className="w-12 h-[1px] bg-white/30 hidden md:block" />
-              <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-light">
+              <p className="text-lg md:text-2xl text-zinc-300 leading-relaxed font-light">
                 Complete business operating systems for service companies. <br className="hidden md:block" />
                 Not websites — revenue machines that run while you sleep.
               </p>
@@ -74,7 +74,7 @@ export default function Home() {
               transition={{ duration: 0.1, delay: 0.2 }}
             >
               <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight btn-glow shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                <Button size="lg" className="w-full md:w-auto rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight btn-glow shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
                   Book a Discovery Call
                 </Button>
               </Link>
@@ -92,13 +92,13 @@ export default function Home() {
       </section>
 
       {/* The Problem */}
-      <section className="py-32 border-t border-white/[0.08] relative">
+      <section className="py-16 md:py-32 border-t border-white/[0.08] relative">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-center text-white">
+          <div className="max-w-4xl mx-auto mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-center text-white">
               You're Probably Doing This Right Now
             </h2>
-            <p className="text-zinc-500 text-xl text-center font-light">
+            <p className="text-zinc-500 text-lg md:text-xl text-center font-light">
               Great service. No system. That's the gap.
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 0, duration: 0.1 }}
-                className="glass-card glass-card-hover p-8 rounded-2xl flex gap-5 items-start group"
+                className="glass-card glass-card-hover p-6 md:p-8 rounded-2xl flex gap-5 items-start group"
               >
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors">
                   <X className="w-4 h-4 text-white/40 group-hover:text-red-500 transition-colors" />
@@ -130,18 +130,18 @@ export default function Home() {
       </section>
 
       {/* The Solution */}
-      <section className="py-32 bg-zinc-950 relative overflow-hidden">
+      <section className="py-16 md:py-32 bg-zinc-950 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="mb-24 md:flex justify-between items-end">
+          <div className="mb-16 md:mb-24 md:flex justify-between items-end">
             <div>
-              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 tracking-tight text-white">
+              <h2 className="text-4xl md:text-7xl font-heading font-bold mb-6 tracking-tight text-white">
                 What If Your Business <br />
                 Ran Without You?
               </h2>
             </div>
-            <p className="text-xl text-zinc-500 max-w-sm font-light mt-8 md:mt-0 text-right">
+            <p className="text-lg md:text-xl text-zinc-500 max-w-sm font-light mt-8 md:mt-0 text-left md:text-right">
               One engagement. Complete system. <br />You own everything.
             </p>
           </div>
@@ -184,15 +184,15 @@ export default function Home() {
       </section>
 
       {/* The Proof (Chef G Teaser) */}
-      <section className="py-40 border-y border-white/[0.08] relative overflow-hidden">
+      <section className="py-16 md:py-40 border-y border-white/[0.08] relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-medium mb-8 text-white/80 backdrop-blur-sm border border-white/10">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 CASE STUDY: CHEF G EVENTS
               </div>
-              <h2 className="text-5xl md:text-7xl font-heading font-bold mb-10 leading-[0.9] tracking-tight text-white">
+              <h2 className="text-4xl md:text-7xl font-heading font-bold mb-10 leading-[0.9] tracking-tight text-white">
                 Built in 6 Weeks. <br />
                 <span className="text-white/40">Paying for Itself in 60 Days.</span>
               </h2>
@@ -211,7 +211,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0, duration: 0.1 }}
-                    className="flex items-center gap-6 text-lg text-zinc-400 border-b border-white/10 pb-4 last:border-0 font-light"
+                    className="flex items-center gap-6 text-base md:text-lg text-zinc-400 border-b border-white/10 pb-4 last:border-0 font-light"
                   >
                     <span className="text-xs font-bold text-white/30 font-mono">0{i + 1}</span>
                     {stat}
@@ -220,7 +220,7 @@ export default function Home() {
               </ul>
 
               <Link href="/case-study">
-                <Button variant="outline" size="lg" className="rounded-full border-white/20 hover:bg-[#10B981] hover:text-white hover:border-[#10B981] transition-all duration-300 h-14 px-8 text-base">
+                <Button variant="outline" size="lg" className="w-full md:w-auto rounded-full border-white/20 hover:bg-[#10B981] hover:text-white hover:border-[#10B981] transition-all duration-300 h-14 px-8 text-base">
                   See the Full Case Study <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
@@ -235,13 +235,13 @@ export default function Home() {
       </section>
 
       {/* The Philosophy */}
-      <section className="py-32 bg-background relative">
+      <section className="py-16 md:py-32 bg-background relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-background to-background" />
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
+          <h2 className="text-3xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
             "Automate Until It Breaks."
           </h2>
-          <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl text-zinc-300 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
             We automate aggressively — not to replace humans, but to find where they are irreplaceable. When automation hits a wall, that's the signal. That's where you hire. That's where you pay top dollar.
           </p>
           <div className="inline-block border border-white/20 rounded-full px-6 py-2">
@@ -253,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* Comparison */}
-      <section className="py-32 border-t border-white/[0.08]">
+      <section className="py-16 md:py-32 border-t border-white/[0.08]">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-heading font-bold mb-16 text-center tracking-tight text-white">Traditional Agency vs. 723 Labs</h2>
           
@@ -291,17 +291,17 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-40 relative overflow-hidden bg-white text-black">
+      <section className="py-16 md:py-40 relative overflow-hidden bg-white text-black">
         <div className="absolute inset-0 bg-white" />
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-6xl md:text-8xl font-heading font-bold mb-8 tracking-tighter text-black">
+          <h2 className="text-4xl md:text-8xl font-heading font-bold mb-8 tracking-tighter text-black">
             Let's See If This Fits.
           </h2>
-          <p className="text-xl md:text-2xl text-zinc-600 mb-12 max-w-2xl mx-auto font-light">
+          <p className="text-lg md:text-2xl text-zinc-600 mb-12 max-w-2xl mx-auto font-light">
             45 minutes. No charge. You'll leave with clarity on what you need — even if you don't hire me.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="rounded-full text-xl px-12 py-10 bg-black text-white hover:bg-black/90 hover:scale-105 transition-all duration-300 shadow-2xl font-bold">
+            <Button size="lg" className="w-full md:w-auto rounded-full text-xl px-12 py-10 bg-black text-white hover:bg-black/90 hover:scale-105 transition-all duration-300 shadow-2xl font-bold">
               Schedule Discovery Call
             </Button>
           </Link>

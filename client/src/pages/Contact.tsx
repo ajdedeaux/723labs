@@ -54,24 +54,24 @@ export default function Contact() {
       <div className="grain" />
       <Navbar />
 
-      <section className="pt-40 pb-20 container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20">
+      <section className="pt-24 md:pt-40 pb-16 md:pb-20 container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-20">
           <motion.div
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-heading font-bold tracking-tighter mb-10 leading-[0.9]">
+            <h1 className="text-5xl md:text-8xl font-heading font-bold tracking-tighter mb-8 md:mb-10 leading-[0.9]">
               Let's <br /> <span className="text-white/40">Talk.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-16 max-w-lg font-light leading-relaxed">
+            <p className="text-lg md:text-2xl text-white/80 mb-12 md:mb-16 max-w-lg font-light leading-relaxed">
               45 minutes. No charge. You'll leave with clarity on what you need — even if you don't hire me.
             </p>
 
             <div className="space-y-12 border-l border-white/10 pl-8">
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 font-heading">What happens next?</h3>
-                <p className="text-white/70 font-light leading-relaxed text-lg">
+                <p className="text-white/70 font-light leading-relaxed text-base md:text-lg">
                   1. You submit this form.<br />
                   2. I'll email you to book a time.<br />
                   3. We meet, audit your system, and see if there's a fit.
@@ -80,7 +80,7 @@ export default function Contact() {
               
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 font-heading">Direct Email</h3>
-                <p className="text-white/70 font-light text-lg hover:text-white transition-colors cursor-pointer">aj@723labs.io</p>
+                <p className="text-white/70 font-light text-base md:text-lg hover:text-white transition-colors cursor-pointer">aj@723labs.io</p>
               </div>
             </div>
           </motion.div>
