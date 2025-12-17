@@ -64,14 +64,14 @@ export default function Contact() {
             <h1 className="text-6xl md:text-8xl font-heading font-bold tracking-tighter mb-10 leading-[0.9]">
               Let's <br /> <span className="text-white/40">Talk.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/60 mb-16 max-w-lg font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/80 mb-16 max-w-lg font-light leading-relaxed">
               45 minutes. No charge. You'll leave with clarity on what you need — even if you don't hire me.
             </p>
 
             <div className="space-y-12 border-l border-white/10 pl-8">
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 font-heading">What happens next?</h3>
-                <p className="text-white/50 font-light leading-relaxed text-lg">
+                <p className="text-white/70 font-light leading-relaxed text-lg">
                   1. You submit this form.<br />
                   2. I'll email you to book a time.<br />
                   3. We meet, audit your system, and see if there's a fit.
@@ -80,7 +80,7 @@ export default function Contact() {
               
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 font-heading">Direct Email</h3>
-                <p className="text-white/50 font-light text-lg hover:text-white transition-colors cursor-pointer">aj@723labs.io</p>
+                <p className="text-white/70 font-light text-lg hover:text-white transition-colors cursor-pointer">aj@723labs.io</p>
               </div>
             </div>
           </motion.div>
@@ -98,9 +98,9 @@ export default function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/40 text-xs uppercase tracking-widest font-bold">Name</FormLabel>
+                      <FormLabel className="text-white/60 text-xs uppercase tracking-widest font-bold">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your name" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/20" />
+                        <Input placeholder="Your name" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/40 font-light" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -112,9 +112,9 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/40 text-xs uppercase tracking-widest font-bold">Email</FormLabel>
+                      <FormLabel className="text-white/60 text-xs uppercase tracking-widest font-bold">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="your@email.com" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/20" />
+                        <Input placeholder="your@email.com" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/40 font-light" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -126,9 +126,9 @@ export default function Contact() {
                   name="company"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/40 text-xs uppercase tracking-widest font-bold">Company</FormLabel>
+                      <FormLabel className="text-white/60 text-xs uppercase tracking-widest font-bold">Company</FormLabel>
                       <FormControl>
-                        <Input placeholder="Company Name" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/20" />
+                        <Input placeholder="Company Name" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/40 font-light" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -140,9 +140,9 @@ export default function Contact() {
                   name="website"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/40 text-xs uppercase tracking-widest font-bold">Current Website (Optional)</FormLabel>
+                      <FormLabel className="text-white/60 text-xs uppercase tracking-widest font-bold">Current Website (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="https://" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/20" />
+                        <Input placeholder="https://" {...field} className="bg-transparent border-0 border-b border-white/20 rounded-none px-0 h-12 focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/40 font-light" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -154,11 +154,11 @@ export default function Contact() {
                   name="challenge"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/40 text-xs uppercase tracking-widest font-bold">The Challenge</FormLabel>
+                      <FormLabel className="text-white/60 text-xs uppercase tracking-widest font-bold">The Challenge</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="What's the biggest bottleneck right now?" 
-                          className="min-h-[120px] bg-transparent border-0 border-b border-white/20 rounded-none px-0 resize-none focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/20 leading-relaxed" 
+                          className="min-h-[120px] bg-transparent border-0 border-b border-white/20 rounded-none px-0 resize-none focus-visible:ring-0 focus-visible:border-white transition-colors text-lg placeholder:text-white/40 leading-relaxed font-light" 
                           {...field} 
                         />
                       </FormControl>

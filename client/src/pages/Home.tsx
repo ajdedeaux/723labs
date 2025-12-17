@@ -62,7 +62,7 @@ export default function Home() {
               className="flex flex-col md:flex-row gap-8 items-start md:items-center max-w-3xl mb-12"
             >
               <div className="w-12 h-[1px] bg-white/30 hidden md:block" />
-              <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed font-light">
                 Complete business operating systems for service companies. <br className="hidden md:block" />
                 Not websites — revenue machines that run while you sleep.
               </p>
@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors">
                   <X className="w-4 h-4 text-white/40 group-hover:text-red-500 transition-colors" />
                 </div>
-                <p className="text-zinc-400 font-light leading-relaxed group-hover:text-zinc-200 transition-colors">{item}</p>
+                <p className="text-zinc-300 font-light leading-relaxed group-hover:text-white transition-colors">{item}</p>
               </motion.div>
             ))}
           </div>
@@ -176,7 +176,7 @@ export default function Home() {
                   {col.icon}
                 </div>
                 <h3 className="text-3xl font-bold mb-4 font-heading text-white">{col.title}</h3>
-                <p className="text-zinc-500 leading-relaxed font-light group-hover:text-zinc-300 transition-colors">{col.desc}</p>
+                <p className="text-zinc-400 leading-relaxed font-light group-hover:text-zinc-200 transition-colors">{col.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -241,7 +241,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
             "Automate Until It Breaks."
           </h2>
-          <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
             We automate aggressively — not to replace humans, but to find where they are irreplaceable. When automation hits a wall, that's the signal. That's where you hire. That's where you pay top dollar.
           </p>
           <div className="inline-block border border-white/20 rounded-full px-6 py-2">
