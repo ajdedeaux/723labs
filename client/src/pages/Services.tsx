@@ -79,9 +79,11 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+      <div className="grain" />
       <Navbar />
 
       <section className="pt-40 pb-24 container mx-auto px-6 text-center relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[120px] pointer-events-none" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,8 +98,8 @@ export default function Services() {
         </motion.div>
       </section>
 
-      <section className="pb-40 container mx-auto px-6">
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-12">
+      <section className="pb-32 container mx-auto px-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {packages.map((pkg, i) => (
             <motion.div 
               key={i}
@@ -105,7 +107,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className={`relative p-12 rounded-2xl border transition-all duration-500 flex flex-col group ${
+              className={`relative p-10 rounded-2xl border transition-all duration-500 flex flex-col group ${
                 pkg.popular 
                   ? "border-white/20 bg-white/[0.03] shadow-[0_0_50px_-20px_rgba(255,255,255,0.1)]" 
                   : "border-white/[0.08] bg-black hover:border-white/20 hover:bg-white/[0.02]"
@@ -147,7 +149,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-40 border-y border-white/[0.08] relative overflow-hidden">
+      <section className="py-32 border-y border-white/[0.08] relative overflow-hidden">
         <div className="absolute inset-0 bg-white/[0.02]" />
         <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Not Sure Which Package?</h2>

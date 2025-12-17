@@ -3,10 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Check, ArrowRight } from "lucide-react";
-import { ChefGMockup } from "@/components/ChefGMockup";
+import mockup from "@assets/generated_images/catering_app_dashboard_mockup.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-import { QuoteBuilderMockup } from "@/components/QuoteBuilderMockup";
 
 export default function CaseStudy() {
   const { scrollY } = useScroll();
@@ -15,6 +13,7 @@ export default function CaseStudy() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+      <div className="grain" />
       <Navbar />
 
       <section className="pt-40 pb-20 container mx-auto px-6">
@@ -38,26 +37,25 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <section className="pb-40 container mx-auto px-6">
+      <section className="pb-32 container mx-auto px-6">
         <motion.div 
           style={{ scale }}
-          className="relative group"
+          className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
         >
-          
-          {/* Laptop Container - Clean, no extreme tilt */}
-          <motion.div
-             className="relative transition-transform duration-700 ease-out"
-          >
-            <ChefGMockup className="shadow-2xl" />
-          </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-50" />
+          <img 
+            src={mockup} 
+            alt="Chef G Transformation" 
+            className="w-full grayscale hover:grayscale-0 transition-all duration-1000"
+          />
         </motion.div>
       </section>
 
-      <section className="py-32 border-t border-white/[0.08]">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-24">
+      <section className="py-20 border-t border-white/[0.08]">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20">
           <div>
-            <h2 className="text-3xl font-heading font-bold mb-10 text-white/40">Before: Great Food, No System</h2>
-            <ul className="space-y-8">
+            <h2 className="text-3xl font-heading font-bold mb-8 text-white/40">Before: Great Food, No System</h2>
+            <ul className="space-y-6">
               {[
                 "No systematic lead capture (Instagram DMs, random emails)",
                 "Manual follow-up — every lead required personal response",
@@ -80,8 +78,8 @@ export default function CaseStudy() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-heading font-bold mb-10 text-white">After: Complete Operating System</h2>
-            <div className="space-y-16">
+            <h2 className="text-3xl font-heading font-bold mb-8 text-white">After: Complete Operating System</h2>
+            <div className="space-y-12">
               {[
                 {
                   title: "Digital Presence",
@@ -120,27 +118,6 @@ export default function CaseStudy() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Internal Tools Showcase */}
-      <section className="py-32 bg-zinc-950 border-t border-white/[0.08] relative overflow-hidden">
-        
-        <div className="container mx-auto px-6 relative z-10">
-           <div className="max-w-3xl mx-auto text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
-                Not Just A Website. <br/>
-                <span className="text-white/40">A Business Engine.</span>
-              </h2>
-              <p className="text-white/60 text-lg font-light">
-                We built custom internal tools to handle the complexity. <br/>
-                Instant quotes. Automated contracts. Zero friction.
-              </p>
-           </div>
-
-           <div className="max-w-5xl mx-auto">
-             <QuoteBuilderMockup />
-           </div>
         </div>
       </section>
 
