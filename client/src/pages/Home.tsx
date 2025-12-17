@@ -45,9 +45,8 @@ export default function Home() {
             >
               <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-extrabold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
-                <span className="relative inline-block">
+                <span className="text-[#10B981]">
                   MACHINE
-                  <span className="absolute -bottom-2 left-0 w-full h-[8px] bg-[#10B981]" />
                 </span>
                 <br />
                 SO YOU CAN <br />
