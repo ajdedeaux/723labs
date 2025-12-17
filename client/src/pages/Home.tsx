@@ -45,9 +45,8 @@ export default function Home() {
             >
               <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-bold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-500 relative">
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#10B981] via-[#34D399] to-[#059669]">
                   MACHINE
-                  <span className="absolute bottom-2 left-0 w-full h-[6px] bg-[#10B981] opacity-80" />
                 </span>
                 <br />
                 SO YOU CAN <br />
