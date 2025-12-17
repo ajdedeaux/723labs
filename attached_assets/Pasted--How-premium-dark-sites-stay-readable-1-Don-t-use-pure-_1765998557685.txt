@@ -1,0 +1,48 @@
+**How premium dark sites stay readable:**
+
+1. **Don’t use pure black (#000) + pure white (#FFF)** — Too harsh, causes eye strain. Use off-black (#0A0A0A or #111) and off-white (#E5E5E5 or #F5F5F5)
+1. **Text hierarchy with gray tones** — Headlines in white, body copy in a softer gray (#A1A1A1), labels in muted gray (#6B6B6B)
+1. **Generous line-height** — 1.5-1.7 for body text
+1. **Subtle text glow** — Some premium sites add a faint glow behind white text to lift it off the background
+
+-----
+
+**Your current palette:**
+
+From what I see, you’re running **monochromatic** — black, white, zinc grays. No accent color yet.
+
+**Options for an accent:**
+
+|Color                     |Vibe                                   |
+|--------------------------|---------------------------------------|
+|Electric blue (#3B82F6)   |Tech, trustworthy, Linear/Vercel energy|
+|Warm white/cream (#FAF9F6)|Subtle, premium, Apple-esque           |
+|Muted gold (#C9A227)      |Luxury, pairs with your Chef G work    |
+|Soft green (#10B981)      |Growth, success, money                 |
+
+I’d lean toward **electric blue** or **muted gold** as a subtle accent for hover states, links, or key highlights — not splashed everywhere, just strategic pops.
+
+-----
+
+**Prompt for Replit:**
+
+> Two fixes needed:
+> 
+> **1. Readability:**
+> 
+> - Soften the contrast — don’t use pure #000 and #FFF together
+> - Use off-black (#0A0A0A or #111) for backgrounds
+> - Use off-white (#E5E5E5) for body text, keep headlines brighter
+> - Increase line-height on body copy to 1.6
+> 
+> **2. Animation:**
+> 
+> - The scroll animation on the pain points section is too slow and laggy — it feels cheap
+> - Either make it instant (0.1s-0.2s fade-up) or remove it entirely
+> - Speed > smoothness. If it can’t be fast, kill it.
+> 
+> **Optional:** Consider adding a subtle accent color (electric blue #3B82F6 or muted gold #C9A227) for hover states and links only — not everywhere, just strategic touches.
+
+-----
+
+What’s your gut on accent color? Or do you want to stay monochromatic?​​​​​​​​​​​​​​​​

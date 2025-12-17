@@ -14,21 +14,21 @@ export default function Home() {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans">
+    <div className="min-h-screen bg-background text-foreground selection:bg-white selection:text-black font-sans">
       <div className="grain" />
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Cinematic Background */}
-        <div className="absolute inset-0 z-0 bg-black">
+        <div className="absolute inset-0 z-0 bg-background">
           <div 
             className="absolute inset-0 opacity-80 bg-cover bg-center mix-blend-screen scale-105"
             style={{ backgroundImage: `url(${heroTexture})` }}
           />
           {/* Vignette & Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
           
           <motion.div 
             style={{ y: y1 }}
@@ -113,9 +113,9 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 0, duration: 0.1 }}
                 className="glass-card glass-card-hover p-8 rounded-2xl flex gap-5 items-start group"
               >
@@ -235,8 +235,8 @@ export default function Home() {
       </section>
 
       {/* The Philosophy */}
-      <section className="py-32 bg-black relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-black to-black" />
+      <section className="py-32 bg-background relative">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-background to-background" />
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
             "Automate Until It Breaks."
