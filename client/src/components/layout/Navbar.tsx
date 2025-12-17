@@ -38,9 +38,9 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
-            <a className="text-xl font-heading font-bold tracking-tight text-white hover:text-white/80 transition-colors z-50 relative group">
+            <a className="text-2xl font-heading font-black tracking-tighter text-white hover:text-white/80 transition-colors z-50 relative group">
               723 LABS
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all group-hover:w-full" />
             </a>
           </Link>
 

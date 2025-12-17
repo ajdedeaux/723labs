@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Check, X, Database, Bot, TrendingUp } from "lucide-react";
-import heroTexture from "@assets/generated_images/dark_cinematic_fog_texture.png";
+import heroTexture from "@assets/generated_images/dark_isometric_grid_background.png";
 import mockup from "@assets/generated_images/catering_app_dashboard_mockup.png";
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
         {/* Cinematic Background */}
         <div className="absolute inset-0 z-0 bg-background">
           <div 
-            className="absolute inset-0 opacity-80 bg-cover bg-center mix-blend-screen scale-105"
+            className="absolute inset-0 opacity-40 bg-cover bg-center mix-blend-screen scale-105"
             style={{ backgroundImage: `url(${heroTexture})` }}
           />
           {/* Vignette & Gradients */}
@@ -43,10 +43,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.1 }}
             >
-              <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-bold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
+              <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-extrabold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#10B981] via-[#34D399] to-[#059669]">
+                <span className="relative inline-block">
                   MACHINE
+                  <span className="absolute -bottom-2 left-0 w-full h-[8px] bg-[#10B981]" />
                 </span>
                 <br />
                 SO YOU CAN <br />
