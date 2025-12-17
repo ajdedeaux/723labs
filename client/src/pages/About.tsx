@@ -7,11 +7,9 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
-      <div className="grain" />
       <Navbar />
       
       <section className="pt-40 pb-20 container mx-auto px-6 relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-[100px] pointer-events-none" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

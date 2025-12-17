@@ -3,8 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, X, Database, Bot, TrendingUp } from "lucide-react";
-import heroTexture from "@assets/generated_images/dark_cinematic_fog_texture.png";
+import { ArrowRight, X, Database, Bot, TrendingUp } from "lucide-react";
 import { ChefGMockup } from "@/components/ChefGMockup";
 
 export default function Home() {
@@ -16,17 +15,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans">
-      <div className="grain" />
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Cinematic Background */}
         <div className="absolute inset-0 z-0 bg-black">
-          <div 
-            className="absolute inset-0 opacity-80 bg-cover bg-center mix-blend-screen scale-105"
-            style={{ backgroundImage: `url(${heroTexture})` }}
-          />
           {/* Vignette & Gradients */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
@@ -75,67 +69,21 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight btn-glow shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]">
                   Book a Discovery Call
                 </Button>
               </Link>
             </motion.div>
           </div>
         </div>
-
-        <motion.div 
-          style={{ opacity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20 text-sm tracking-widest uppercase animate-pulse flex flex-col items-center gap-2"
-        >
-          <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
-          Scroll to Explore
-        </motion.div>
-      </section>
-
-      {/* The Problem */}
-      <section className="py-32 border-t border-white/[0.08] relative">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-center text-white">
-              You're Probably Doing This Right Now
-            </h2>
-            <p className="text-zinc-500 text-xl text-center font-light">
-              Great service. No system. That's the gap.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              "Leads come in through 5 different channels, none connected.",
-              "You respond when you can — sometimes same day, sometimes not.",
-              "Your 'CRM' is a spreadsheet you haven't opened in weeks.",
-              "Your website looks fine but doesn't actually convert.",
-              "You know you need a system but don't have time to build one."
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: i * 0.1, duration: 0.8 }}
-                className="glass-card glass-card-hover p-8 rounded-2xl flex gap-5 items-start group"
-              >
-                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors">
-                  <X className="w-4 h-4 text-white/40 group-hover:text-red-500 transition-colors" />
-                </div>
-                <p className="text-zinc-400 font-light leading-relaxed group-hover:text-zinc-200 transition-colors">{item}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* The Solution */}
-      <section className="py-32 bg-zinc-950 relative overflow-hidden">
+      <section className="py-40 bg-black relative overflow-hidden border-t border-white/[0.08]">
         <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="mb-24 md:flex justify-between items-end">
+          <div className="mb-32 md:flex justify-between items-end">
             <div>
               <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 tracking-tight text-white">
                 What If Your Business <br />
@@ -147,7 +95,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {[
               {
                 icon: <Database className="w-6 h-6" />,
@@ -229,19 +177,18 @@ export default function Home() {
 
             <motion.div 
               style={{ y: y2 }}
-              className="relative perspective-[2000px] group"
+              className="relative group"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-30 blur-3xl rounded-full" />
+              {/* Subtle Glow - White/Zinc only */}
+              <div className="absolute inset-0 bg-white/5 blur-3xl rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-700" />
               
-              {/* 3D Tilted Mockup Container */}
+              {/* Clean Mockup Container - Minimal Tilt */}
               <motion.div
-                style={{ rotateX: 5, rotateY: -10, rotateZ: 2 }}
-                className="relative rounded-xl bg-zinc-900 p-2 shadow-2xl ring-1 ring-white/10 transition-transform duration-700 ease-out group-hover:rotate-0"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.5 }}
+                className="relative rounded-xl bg-zinc-900 shadow-2xl ring-1 ring-white/10"
               >
                 <ChefGMockup className="rounded-lg shadow-inner" />
-                
-                {/* Reflection Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-xl pointer-events-none mix-blend-overlay" />
               </motion.div>
             </motion.div>
           </div>
@@ -249,7 +196,7 @@ export default function Home() {
       </section>
 
       {/* The Philosophy */}
-      <section className="py-32 bg-black relative">
+      <section className="py-40 bg-black relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-black to-black" />
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
@@ -266,46 +213,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Comparison */}
-      <section className="py-32 border-t border-white/[0.08]">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-heading font-bold mb-16 text-center tracking-tight text-white">Traditional Agency vs. 723 Labs</h2>
-          
-          <div className="grid md:grid-cols-3 gap-[1px] bg-white/10 border border-white/10 max-w-6xl mx-auto rounded-2xl overflow-hidden">
-            {/* Headers */}
-            <div className="bg-zinc-950/50 p-8 hidden md:block backdrop-blur-md"></div>
-            <div className="bg-zinc-950/50 p-8 font-bold text-white/40 text-center uppercase tracking-widest text-xs backdrop-blur-md">Traditional</div>
-            <div className="bg-white/5 p-8 font-bold text-white text-center uppercase tracking-widest text-xs relative backdrop-blur-md">
-              723 Labs
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
-            </div>
-
-            {/* Rows */}
-            {[
-              { label: "Cost", trad: "$45K - $133K", us: "$6K - $25K" },
-              { label: "Timeline", trad: "3-6 months", us: "4-6 weeks" },
-              { label: "Deliverables", trad: "Website, maybe strategy", us: "Complete Operating System" },
-              { label: "AI Included", trad: "$10K add-on", us: "Standard" },
-              { label: "Ongoing Cost", trad: "$850 - $3,700/mo", us: "<$100/mo" },
-            ].map((row, i) => (
-              <>
-                <div className="bg-zinc-950 p-6 font-mono text-white/40 flex items-center justify-center md:justify-start font-bold md:font-normal text-sm border-t md:border-t-0 border-white/5">
-                  {row.label}
-                </div>
-                <div className="bg-zinc-950 p-6 text-white/40 flex items-center justify-center text-center font-light border-t md:border-t-0 border-white/5">
-                  <span className="md:hidden font-bold mr-2 text-white/20">Trad:</span> {row.trad}
-                </div>
-                <div className="bg-white/[0.03] p-6 text-white font-bold flex items-center justify-center text-center border-t md:border-t-0 border-white/5 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)]">
-                   <span className="md:hidden font-bold mr-2 text-white/50">723:</span> {row.us}
-                </div>
-              </>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="py-40 relative overflow-hidden">
+      <section className="py-40 relative overflow-hidden border-t border-white/[0.08]">
         <div className="absolute inset-0 bg-white/[0.02]" />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h2 className="text-6xl md:text-8xl font-heading font-bold mb-8 tracking-tighter text-white">

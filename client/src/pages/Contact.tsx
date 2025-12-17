@@ -51,7 +51,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
-      <div className="grain" />
       <Navbar />
 
       <section className="pt-40 pb-20 container mx-auto px-6">

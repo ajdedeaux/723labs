@@ -15,7 +15,6 @@ export default function CaseStudy() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
-      <div className="grain" />
       <Navbar />
 
       <section className="pt-40 pb-20 container mx-auto px-6">
@@ -39,32 +38,26 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      <section className="pb-32 container mx-auto px-6">
+      <section className="pb-40 container mx-auto px-6">
         <motion.div 
           style={{ scale }}
-          className="relative perspective-[2000px] group"
+          className="relative group"
         >
-          {/* Ambient Glow */}
-          <div className="absolute -inset-20 bg-amber-500/5 blur-[100px] rounded-full pointer-events-none" />
           
-          {/* Laptop Container with Tilt */}
+          {/* Laptop Container - Clean, no extreme tilt */}
           <motion.div
-             style={{ rotateX: 5 }}
              className="relative transition-transform duration-700 ease-out"
           >
-            <ChefGMockup className="shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)]" />
-            
-            {/* Reflection under the laptop */}
-            <div className="absolute -bottom-[20px] left-4 right-4 h-[20px] bg-gradient-to-b from-white/5 to-transparent blur-xl opacity-30 rounded-[50%]" />
+            <ChefGMockup className="shadow-2xl" />
           </motion.div>
         </motion.div>
       </section>
 
-      <section className="py-20 border-t border-white/[0.08]">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20">
+      <section className="py-32 border-t border-white/[0.08]">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-24">
           <div>
-            <h2 className="text-3xl font-heading font-bold mb-8 text-white/40">Before: Great Food, No System</h2>
-            <ul className="space-y-6">
+            <h2 className="text-3xl font-heading font-bold mb-10 text-white/40">Before: Great Food, No System</h2>
+            <ul className="space-y-8">
               {[
                 "No systematic lead capture (Instagram DMs, random emails)",
                 "Manual follow-up — every lead required personal response",
@@ -87,8 +80,8 @@ export default function CaseStudy() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-heading font-bold mb-8 text-white">After: Complete Operating System</h2>
-            <div className="space-y-12">
+            <h2 className="text-3xl font-heading font-bold mb-10 text-white">After: Complete Operating System</h2>
+            <div className="space-y-16">
               {[
                 {
                   title: "Digital Presence",
@@ -132,13 +125,12 @@ export default function CaseStudy() {
 
       {/* Internal Tools Showcase */}
       <section className="py-32 bg-zinc-950 border-t border-white/[0.08] relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/10 via-black to-black pointer-events-none" />
         
         <div className="container mx-auto px-6 relative z-10">
            <div className="max-w-3xl mx-auto text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
                 Not Just A Website. <br/>
-                <span className="text-[#C69C6D]">A Business Engine.</span>
+                <span className="text-white/40">A Business Engine.</span>
               </h2>
               <p className="text-white/60 text-lg font-light">
                 We built custom internal tools to handle the complexity. <br/>
