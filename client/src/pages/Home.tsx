@@ -84,7 +84,7 @@ export default function Home() {
 
         <motion.div 
           style={{ opacity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20 text-sm tracking-widest uppercase animate-pulse flex flex-col items-center gap-2"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20 text-sm tracking-widest uppercase animate-pulse hidden md:flex flex-col items-center gap-2"
         >
           <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
           Scroll to Explore
