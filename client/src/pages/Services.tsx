@@ -114,7 +114,7 @@ export default function Services() {
               }`}
             >
               {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-white text-black text-[10px] font-bold px-4 py-1.5 font-mono uppercase tracking-widest rounded-bl-xl rounded-tr-xl">
+                <div className="absolute top-0 right-0 bg-emerald-500 text-black text-[10px] font-bold px-4 py-1.5 font-mono uppercase tracking-widest rounded-bl-xl rounded-tr-xl">
                   Most Popular
                 </div>
               )}
@@ -126,7 +126,7 @@ export default function Services() {
               <ul className="space-y-4 mb-10 flex-1">
                 {pkg.features.map((feat, j) => (
                   <li key={j} className="flex gap-3 text-sm text-zinc-300 font-light group-hover:text-white transition-colors">
-                    <Check className="w-4 h-4 text-white/60 shrink-0 mt-0.5 group-hover:text-white transition-colors" />
+                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5 group-hover:text-emerald-400 transition-colors" />
                     {feat}
                   </li>
                 ))}

@@ -24,7 +24,7 @@ export default function CaseStudy() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-medium mb-8 text-white/80 backdrop-blur-sm border border-white/10">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               CASE STUDY: CHEF G EVENTS
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter mb-10 leading-[0.9]">
@@ -109,7 +109,7 @@ export default function CaseStudy() {
                   <ul className="space-y-3">
                     {group.items.map((item, j) => (
                       <li key={j} className="flex gap-3 items-start text-white/60 font-light">
-                        <Check className="w-5 h-5 text-white mt-0.5" />
+                        <Check className="w-5 h-5 text-emerald-500 mt-0.5" />
                         {item}
                       </li>
                     ))}
