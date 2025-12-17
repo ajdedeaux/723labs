@@ -1,0 +1,44 @@
+**What’s Working (KEEP):**
+
+|Element                                  |Why                                                                                                                                             |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+|**Full-screen mobile nav** (Image 1)     |Premium feel, clean hierarchy, “Start Project” CTA                                                                                              |
+|**“SCROLL TO EXPLORE”** (Image 2)        |Subtle hint that invites engagement                                                                                                             |
+|**Rounded pain point cards** (Images 3-4)|More polished than the flat boxes in deployed version                                                                                           |
+|**Green dot on case study tag** (Image 7)|Nice “live” indicator touch                                                                                                                     |
+|**Philosophy copy** (Image 9)            |🔥 “Automate Until It Breaks” + the full explanation is EXACTLY what you wanted. Way clearer than before. “THE SAVINGS FUND THE TALENT” nails it.|
+|**Footer** (Images 14-15)                |Sitemap, socials, legal links — more professional than deployed                                                                                 |
+
+-----
+
+**What’s NOT Working (KILL):**
+
+|Element                    |Why                                                                                                  |
+|---------------------------|-----------------------------------------------------------------------------------------------------|
+|**Laptop mockup** (Image 8)|Still has “MENU CAESINESS” garbage. Either remove it entirely or replace with real Chef G screenshot.|
+|**Heavy animations**       |You said it’s slowing things down. Speed > polish. Kill or simplify the scroll animations.           |
+
+-----
+
+**Prompt for Replit:**
+
+> Here’s what I want to merge into the deployed site:
+> 
+> **KEEP from this version:**
+> 
+> - Full-screen mobile navigation
+> - Philosophy section: “Automate Until It Breaks” headline + new body copy + “THE SAVINGS FUND THE TALENT” tagline
+> - Green dot indicator on case study tag
+> - Rounded card styling on pain points
+> - Footer with sitemap and socials
+> 
+> **KILL:**
+> 
+> - The laptop mockup with fake screen content — remove it entirely for now
+> - Heavy scroll animations — strip them out or make them instant. Speed is priority.
+> 
+> **Deploy this as the live site once those changes are made.**
+
+-----
+
+The philosophy section alone is worth the update. That copy lands now. Send it.​​​​​​​​​​​​​​​​

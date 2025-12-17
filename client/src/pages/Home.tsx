@@ -38,10 +38,10 @@ export default function Home() {
         
         <div className="container relative z-10 mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-10">
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.1 }}
             >
               <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-bold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
@@ -58,7 +58,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.1, delay: 0.1 }}
               className="flex flex-col md:flex-row gap-8 items-start md:items-center max-w-3xl mb-12"
             >
               <div className="w-12 h-[1px] bg-white/30 hidden md:block" />
@@ -71,7 +71,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.1, delay: 0.2 }}
             >
               <Link href="/contact">
                 <Button size="lg" className="rounded-full text-lg px-10 py-8 bg-white text-black hover:bg-white/90 transition-all hover:scale-105 duration-300 font-bold tracking-tight btn-glow shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
@@ -116,7 +116,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: i * 0.1, duration: 0.8 }}
+                transition={{ delay: 0, duration: 0.1 }}
                 className="glass-card glass-card-hover p-8 rounded-2xl flex gap-5 items-start group"
               >
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-red-500/20 transition-colors">
@@ -169,7 +169,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.2, duration: 0.8 }}
+                transition={{ delay: 0, duration: 0.1 }}
                 className="group relative border-l border-white/10 pl-8 py-8 hover:border-white/40 transition-colors duration-500"
               >
                 <div className="mb-8 w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-500">
@@ -210,7 +210,7 @@ export default function Home() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                    transition={{ delay: 0, duration: 0.1 }}
                     className="flex items-center gap-6 text-lg text-zinc-400 border-b border-white/10 pb-4 last:border-0 font-light"
                   >
                     <span className="text-xs font-bold text-white/30 font-mono">0{i + 1}</span>
@@ -226,17 +226,10 @@ export default function Home() {
               </Link>
             </div>
 
-            <motion.div 
-              style={{ y: y2 }}
-              className="relative perspective-1000"
-            >
+            <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-30 blur-3xl rounded-full" />
-              <img 
-                src={mockup} 
-                alt="Chef G Dashboard" 
-                className="w-full rounded-xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02] hover:shadow-[0_20px_80px_-20px_rgba(255,255,255,0.1)]"
-              />
-            </motion.div>
+              {/* Mockup removed as requested */}
+            </div>
           </div>
         </div>
       </section>
