@@ -246,14 +246,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/[0.03] via-black to-black" />
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-heading font-bold mb-10 leading-tight text-white">
-            "Build Fast. Test Relentlessly. <br /> <span className="text-white/30">Kill What Doesn't Work.</span>"
+            "Automate Until It Breaks."
           </h2>
           <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
-            We built a text-based AI assistant. It worked technically. But real-world testing showed it needed more personal touch. We killed it in a week and pivoted to voice AI — which performed significantly better on day one.
+            We automate aggressively — not to replace humans, but to find where they are irreplaceable. When automation hits a wall, that's the signal. That's where you hire. That's where you pay top dollar.
           </p>
           <div className="inline-block border border-white/20 rounded-full px-6 py-2">
             <p className="text-white font-mono text-sm tracking-widest uppercase">
-              Automation finds the humans. That's the point.
+              The savings fund the talent.
             </p>
           </div>
         </div>
