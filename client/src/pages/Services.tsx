@@ -137,8 +137,8 @@ export default function Services() {
                 <Link href="/contact">
                   <Button className={`w-full rounded-full h-12 text-sm font-bold tracking-wide transition-all duration-300 ${
                     pkg.popular 
-                      ? "bg-white text-black hover:bg-white/90 hover:scale-[1.02]" 
-                      : "bg-white/10 text-white border border-white/10 hover:bg-white hover:text-black hover:border-white"
+                      ? "bg-white text-black hover:bg-[#10B981] hover:text-white hover:scale-[1.02]" 
+                      : "bg-white/10 text-white border border-white/10 hover:bg-[#10B981] hover:text-white hover:border-[#10B981]"
                   }`}>
                     Select Package
                   </Button>

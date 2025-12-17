@@ -45,8 +45,9 @@ export default function Home() {
             >
               <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-heading font-bold tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
                 I BUILD THE <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-500 relative">
                   MACHINE
+                  <span className="absolute bottom-2 left-0 w-full h-[6px] bg-[#10B981] opacity-80" />
                 </span>
                 <br />
                 SO YOU CAN <br />
@@ -220,7 +221,7 @@ export default function Home() {
               </ul>
 
               <Link href="/case-study">
-                <Button variant="outline" size="lg" className="rounded-full border-white/20 hover:bg-white hover:text-black hover:border-white transition-all duration-300 h-14 px-8 text-base">
+                <Button variant="outline" size="lg" className="rounded-full border-white/20 hover:bg-[#10B981] hover:text-white hover:border-[#10B981] transition-all duration-300 h-14 px-8 text-base">
                   See the Full Case Study <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
