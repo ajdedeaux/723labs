@@ -5,12 +5,13 @@ import { Link } from "wouter";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Check, X, Database, Bot, TrendingUp } from "lucide-react";
 import heroTexture from "@assets/generated_images/dark_cinematic_fog_texture.png";
-import mockup from "@assets/generated_images/catering_app_dashboard_mockup.png";
+import { ChefGMockup } from "@/components/ChefGMockup";
 
 export default function Home() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const y2 = useTransform(scrollY, [0, 500], [0, -100]);
+  const rotateX = useTransform(scrollY, [0, 500], [20, 0]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
@@ -228,14 +229,20 @@ export default function Home() {
 
             <motion.div 
               style={{ y: y2 }}
-              className="relative perspective-1000"
+              className="relative perspective-[2000px] group"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-30 blur-3xl rounded-full" />
-              <img 
-                src={mockup} 
-                alt="Chef G Dashboard" 
-                className="w-full rounded-xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.02] hover:shadow-[0_20px_80px_-20px_rgba(255,255,255,0.1)]"
-              />
+              
+              {/* 3D Tilted Mockup Container */}
+              <motion.div
+                style={{ rotateX: 5, rotateY: -10, rotateZ: 2 }}
+                className="relative rounded-xl bg-zinc-900 p-2 shadow-2xl ring-1 ring-white/10 transition-transform duration-700 ease-out group-hover:rotate-0"
+              >
+                <ChefGMockup className="rounded-lg shadow-inner" />
+                
+                {/* Reflection Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-xl pointer-events-none mix-blend-overlay" />
+              </motion.div>
             </motion.div>
           </div>
         </div>

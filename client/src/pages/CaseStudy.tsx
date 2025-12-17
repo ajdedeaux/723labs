@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Check, ArrowRight } from "lucide-react";
-import mockup from "@assets/generated_images/catering_app_dashboard_mockup.png";
+import { ChefGMockup } from "@/components/ChefGMockup";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function CaseStudy() {
@@ -40,14 +40,21 @@ export default function CaseStudy() {
       <section className="pb-32 container mx-auto px-6">
         <motion.div 
           style={{ scale }}
-          className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+          className="relative perspective-[2000px] group"
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-50" />
-          <img 
-            src={mockup} 
-            alt="Chef G Transformation" 
-            className="w-full grayscale hover:grayscale-0 transition-all duration-1000"
-          />
+          {/* Ambient Glow */}
+          <div className="absolute -inset-20 bg-amber-500/5 blur-[100px] rounded-full pointer-events-none" />
+          
+          {/* Laptop Container with Tilt */}
+          <motion.div
+             style={{ rotateX: 5 }}
+             className="relative transition-transform duration-700 ease-out"
+          >
+            <ChefGMockup className="shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)]" />
+            
+            {/* Reflection under the laptop */}
+            <div className="absolute -bottom-[20px] left-4 right-4 h-[20px] bg-gradient-to-b from-white/5 to-transparent blur-xl opacity-30 rounded-[50%]" />
+          </motion.div>
         </motion.div>
       </section>
 
